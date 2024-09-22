@@ -2,7 +2,6 @@ let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 
 function showSlide(index) {
-    // Ensure the slide index loops correctly
     currentSlide = (index + slides.length) % slides.length;
 
     slides.forEach((slide, i) => {
@@ -16,14 +15,10 @@ function changeSlide(direction) {
     showSlide(currentSlide + direction);
 }
 
-// Initially show the first slide
 showSlide(currentSlide);
 
-// Optional: Automatically change slides every 5 seconds
 setInterval(() => changeSlide(1), 5000);
 
-
-/* content section animation------------------------------------------------------------------------------------------*/
 const items = document.querySelectorAll('.content-item');
 
 const observer = new IntersectionObserver((entries) => {
@@ -42,8 +37,6 @@ items.forEach(item => {
     observer.observe(item);
 });
 
-
-/* scrolling header reappear functionality------------------------------------------------------------------------------*/
 let lastScrollTop = 0;
 const header = document.querySelector('.header');
 
@@ -51,12 +44,10 @@ window.addEventListener('scroll', function() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollTop > lastScrollTop) {
-        // Scrolling down
-        header.style.transform = 'translateY(-100%)'; // Hide header
+        header.style.transform = 'translateY(-100%)';
     } else {
-        // Scrolling up
-        header.style.transform = 'translateY(0)'; // Show header
+        header.style.transform = 'translateY(0)';
     }
     
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
