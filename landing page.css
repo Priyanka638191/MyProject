@@ -1,0 +1,372 @@
+/* General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    line-height: 1.6;
+    background-color: #1a1a1a; /* Dark background */
+    color: #f0f0f0; /* Light text for readability */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 100px; /* Adjust if needed */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+h1 {
+    font-size: 1.2em;
+    margin: 0;
+    line-height: 1;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: #262626;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 2px 0;
+    font-size: 0.8em;
+}
+
+/* Slider Container */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    height: 500px; /* Adjust height */
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Text Overlay on Slide */
+.slide-text {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    z-index: 2;
+}
+
+.slide-text h2 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.slide-text p {
+    font-size: 18px;
+    margin: 10px 0 0;
+}
+
+.active-slide {
+    opacity: 1;
+}
+/* General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    background-color: #1a1a1a; 
+    color: #f0f0f0;
+}
+
+/* Header */
+header {
+    background-color: #262626;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 5px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 0.9em;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Logo Styling */
+.logo {
+    width: 30px;
+    height: auto;
+    margin-right: 8px;
+}
+
+h1 {
+    font-size: 1.2em;
+    margin: 0;
+    line-height: 1;
+}
+
+/* Slider Section */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    height: 500px; /* Adjust height */
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.active-slide {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+/* Slider Navigation */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+/* Slider Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.active-slide {
+    opacity: 1;
+}
+
+/* Flex Layout for Content with Image */
+.content-with-image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 20px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.image-content {
+    flex: 1;
+}
+
+.content-img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin-left: 3cm;
+}
+
+/* Footer */
+footer {
+    background-color: #262626;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+.footer-images {
+    margin: 20px 0;
+}
+
+.footer-img {
+    width: 30%;
+    margin: 10px;
+    height: 150px;
+    object-fit: cover;
+}
+/* content section------------------------------------------*/
+.content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #0a0101;
+}
+
+.content-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    width: 80%;
+    border: 2px solid #ff7403;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    background-color: #0c0909;
+}
+
+.content-item:hover {
+    transform: scale(1.02);
+}
+
+.content-image {
+    width: 40%;
+    height: auto;
+}
+
+.content-text {
+    width: 55%; /* Adjust width for text area */
+    padding: 20px;
+}
+.content-text h3 {
+    margin: 0;
+    color: #333;
+}
+
+.content-text p {
+    color: #666;
+}
+
+.content-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
